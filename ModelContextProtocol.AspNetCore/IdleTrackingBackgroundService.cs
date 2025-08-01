@@ -23,8 +23,6 @@ internal sealed partial class IdleTrackingBackgroundService(
             throw new ArgumentOutOfRangeException();
         }
 
-        throw new ArgumentOutOfRangeException();
-
         try
         {
             var timeProvider = options.Value.TimeProvider;
