@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <PackageId>dotnetmcp</PackageId>
+    <Description>ASP.NET Core extensions for the C# Model Context Protocol (MCP) SDK.</Description>
+    <IsAotCompatible>true</IsAotCompatible>
+    <VersionMajor>1</VersionMajor>
+    <VersionMinor>0</VersionMinor>
+    <VersionPatch>0</VersionPatch>
+    <VersionCode>3</VersionCode>
+    <VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch).$(VersionCode)</VersionPrefix>
+    <!--<VersionSuffix>-release.3</VersionSuffix>-->
+    <Version>$(VersionPrefix)$(VersionSuffix)</Version>
+    <AssemblyVersion>$(VersionMajor).0.0.0</AssemblyVersion>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Authentication\McpAuthenticationDefaults.cs" />
+    <None Include="Authentication\McpAuthenticationDefaults.cs" />
+    <Compile Remove="Authentication\McpAuthenticationEvents.cs" />
+    <None Include="Authentication\McpAuthenticationEvents.cs" />
+    <Compile Remove="Authentication\McpAuthenticationExtensions.cs" />
+    <None Include="Authentication\McpAuthenticationExtensions.cs" />
+    <Compile Remove="Authentication\McpAuthenticationHandler.cs" />
+    <None Include="Authentication\McpAuthenticationHandler.cs" />
+    <Compile Remove="Authentication\McpAuthenticationOptions.cs" />
+    <None Include="Authentication\McpAuthenticationOptions.cs" />
+    <Compile Remove="Authentication\ResourceMetadataRequestContext.cs" />
+    <None Include="Authentication\ResourceMetadataRequestContext.cs" />
+  </ItemGroup>
+
+</Project>
