@@ -27,19 +27,4 @@
     <PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.3" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Authentication\McpAuthenticationDefaults.cs" />
-    <None Include="Authentication\McpAuthenticationDefaults.cs" />
-    <Compile Remove="Authentication\McpAuthenticationEvents.cs" />
-    <None Include="Authentication\McpAuthenticationEvents.cs" />
-    <Compile Remove="Authentication\McpAuthenticationExtensions.cs" />
-    <None Include="Authentication\McpAuthenticationExtensions.cs" />
-    <Compile Remove="Authentication\McpAuthenticationHandler.cs" />
-    <None Include="Authentication\McpAuthenticationHandler.cs" />
-    <Compile Remove="Authentication\McpAuthenticationOptions.cs" />
-    <None Include="Authentication\McpAuthenticationOptions.cs" />
-    <Compile Remove="Authentication\ResourceMetadataRequestContext.cs" />
-    <None Include="Authentication\ResourceMetadataRequestContext.cs" />
-  </ItemGroup>
-
 </Project>
