@@ -19,7 +19,7 @@ using Microsoft.Extensions.Primitives;
 
 namespace ModelContextProtocol.AspNetCore;
 
-internal sealed class StreamableHttpHandler(
+public sealed class StreamableHttpHandler(
     IOptions<McpServerOptions> mcpServerOptionsSnapshot,
     IOptionsFactory<McpServerOptions> mcpServerOptionsFactory,
     IOptions<HttpServerTransportOptions> httpServerTransportOptions,

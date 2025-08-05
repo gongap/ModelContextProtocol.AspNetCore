@@ -5,7 +5,7 @@ using System.Security.Claims;
 
 namespace ModelContextProtocol.AspNetCore;
 
-internal sealed class HttpMcpSession<TTransport>(
+public sealed class HttpMcpSession<TTransport>(
     string sessionId,
     TTransport transport,
     UserIdClaim? userId,
