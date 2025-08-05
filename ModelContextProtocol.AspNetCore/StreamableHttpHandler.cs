@@ -359,7 +359,10 @@ public sealed class StreamableHttpHandler(
 
     private sealed class HttpDuplexPipe(HttpContext context) : IDuplexPipe
     {
-        public PipeReader Input => context.Request.BodyReader;
-        public PipeWriter Output => context.Response.BodyWriter;
+        // public PipeReader Input => context.Request.BodyReader;
+        // public PipeWriter Output => context.Response.BodyWriter;
+        
+        public PipeReader Input => PipeReader.Create(context.Request.Body);
+        public PipeWriter Output => PipeWriter.Create(context.Response.Body);
     }
 }
